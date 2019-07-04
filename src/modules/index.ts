@@ -1,14 +1,14 @@
 import { Router } from 'express-serve-static-core';
 
-import { router } from './auth';
+import { router as authRouter } from './auth';
+import { router as usersRouter } from './users';
 // #region routers map
-export enum EModuleName {
+enum EModuleName {
     Auth = 'auth',
-    Posts = 'posts',
     Users = 'users',
 }
 
-const routesMap = new Map<string, Router>([[EModuleName.Auth, router]]);
+const routesMap = new Map<string, Router>([[EModuleName.Auth, authRouter], [EModuleName.Users, usersRouter]]);
 // #endregion routers map
 
-export { routesMap };
+export { routesMap, EModuleName };
