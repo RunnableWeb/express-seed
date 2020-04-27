@@ -10,11 +10,20 @@ module.exports =  {
     sourceType:  'module',  // Allows for the use of imports
   },
   rules:  {
+    "prettier/prettier": ["error", {
+          "endOfLine":"auto"
+    }],
+    "@typescript-eslint/member-naming": ["error", {
+      "private": "^_",
+    }],
     // Place to specify ESLint rules. Can be used to overwrite rules specified from the extended configs
     "@typescript-eslint/explicit-function-return-type": "off",
     "@typescript-eslint/no-unused-vars": "off",
     "@typescript-eslint/explicit-member-accessibility": "off",
     "@typescript-eslint/interface-name-prefix":"off",
-    "@typescript-eslint/no-object-literal-type-assertion": "off"
+    "@typescript-eslint/no-object-literal-type-assertion": "off",
+    "@typescript-eslint/no-use-before-define": "off",
+    "@typescript-eslint/no-explicit-any":"off",
+    "@typescript-eslint/no-empty-interface":"off",
   },
 };

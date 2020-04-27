@@ -11,8 +11,7 @@
         "editor.formatOnSave": false
     },
     // available through eslint plugin in vscode
-    "eslint.autoFixOnSave": true,
-    "eslint.alwaysShowStatus": true,
-    "eslint.validate": ["javascript", { "language": "typescript", "autoFix": true }],
-    "javascript.preferences.quoteStyle": "single"
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    }
 }
