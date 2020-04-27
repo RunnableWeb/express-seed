@@ -8,7 +8,10 @@ enum EModuleName {
     Users = 'users',
 }
 
-const routesMap = new Map<string, Router>([[EModuleName.Auth, authRouter], [EModuleName.Users, usersRouter]]);
+const routesMap = new Map<string, Router>([
+    [EModuleName.Auth, authRouter],
+    [EModuleName.Users, usersRouter],
+]);
 // #endregion routers map
 
 export { routesMap, EModuleName };

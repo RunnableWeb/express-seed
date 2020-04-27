@@ -1,3 +1,5 @@
+import 'module-alias/register';
+
 import http from 'http';
 import app from './../../app';
 
@@ -8,12 +10,12 @@ server.listen(port, () => {
     console.log(`server is running on port ${port}`);
 });
 
-process.on('uncaughtException', e => {
+process.on('uncaughtException', (e) => {
     console.log(e);
     process.exit(1);
 });
 
-process.on('unhandledRejection', e => {
+process.on('unhandledRejection', (e) => {
     console.log(e);
     process.exit(1);
 });

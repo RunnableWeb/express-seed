@@ -15,6 +15,15 @@
         "resolveJsonModule": true /* Include modules imported with '.json' extension */,
 
         "experimentalDecorators": true,
-        "emitDecoratorMetadata": true
+        "emitDecoratorMetadata": true,
+
+        "paths": {
+            "@rw-node-utils-ts": ["./utils"],
+            "@app/config": ["./config"],
+            "@app/middlewares": ["./middlewares"],
+            "@app/modules": ["./modules"],
+            "@app/repository": ["./repository"],
+            "@app/repository/models": ["./repository/models"]
+        }
     }
 }

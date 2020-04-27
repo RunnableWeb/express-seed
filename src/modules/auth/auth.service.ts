@@ -1,10 +1,10 @@
 import jwt from 'jsonwebtoken';
-import dotenv from 'dotenv';
 import bcrypt from 'bcryptjs';
 
-import { UsersRepo } from '../users';
-import { HTTP400Error } from '../../utils';
-import { IUser } from '../users/models';
+import { UsersRepo } from '@app/repository';
+import { IUser } from '@app/repository/models';
+
+import { HTTP400Error } from '@rw-node-utils-ts';
 
 import { LoginOrRegisterResponse } from './interfaces';
 

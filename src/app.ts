@@ -1,11 +1,11 @@
 import express from 'express';
 
 import { mwCommons, mwErrors } from './middlewares';
-import { applyMiddleware, applyRoutes } from './utils';
-import { routesMap } from './modules';
+import { applyMiddleware, applyRoutes } from '@rw-node-utils-ts';
+import { routesMap } from '@app/modules';
 
 import dotenv from 'dotenv';
-import { config } from './config';
+import { config } from '@app/config';
 
 const app = express();
 

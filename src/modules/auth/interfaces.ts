@@ -1,4 +1,4 @@
-import { IUser } from '../users';
+import { IUser } from '@app/repository/models';
 
 export interface LoginOrRegisterResponse {
     created: boolean;

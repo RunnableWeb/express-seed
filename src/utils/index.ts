@@ -19,7 +19,9 @@ export const applyRoutes = (routers: Map<string, Router>, app: Application) => {
 
     app.use(`${apiBase}/${EModuleName.Auth}`, routers.get(EModuleName.Auth) as Router);
 
-    app.use(`${apiBase}/${EModuleName.Users}`, passport.authenticate(passportStrategy, passportOptions), routers.get(
-        EModuleName.Users,
-    ) as Router);
+    app.use(
+        `${apiBase}/${EModuleName.Users}`,
+        passport.authenticate(passportStrategy, passportOptions),
+        routers.get(EModuleName.Users) as Router,
+    );
 };

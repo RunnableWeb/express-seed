@@ -1,6 +1,5 @@
-import { BaseRepo } from '../../repository';
+import { BaseRepo } from './BaseRepo';
 import { IUser, User } from './models';
-import moment = require('moment');
 
 export class UsersRepo extends BaseRepo<IUser> {
     constructor() {
