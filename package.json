@@ -1,5 +1,5 @@
 {
-    "name": "rw-experss-seed",
+    "name": "rw-express-seed",
     "version": "1.0.0",
     "description": "",
     "main": "dist/bin/www/server.js",
