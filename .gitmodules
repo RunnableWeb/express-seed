@@ -1,3 +1,6 @@
 [submodule "src/repository/rw-node-mongoose-ts"]
 	path = src/repository/rw-node-mongoose-ts
 	url = https://bitbucket.org/runnableweb/rw-node-mongoose-ts.git
+[submodule "src/rw-node-common-ts"]
+	path = src/rw-node-common-ts
+	url = https://bitbucket.org/runnableweb/rw-node-common-ts.git

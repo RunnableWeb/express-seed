@@ -1,17 +1,16 @@
 import jwt from 'jsonwebtoken';
 import bcrypt from 'bcryptjs';
 
-import { UsersRepo } from '@app/repository';
+import { usersRepo } from '@app/repository/repos';
 import { IUser } from '@app/repository/models';
 
-import { HTTP400Error } from '@rw-node-utils-ts';
+import { HTTPBadRequestError } from '@rw-node-common-ts';
 
 import { LoginOrRegisterResponse } from './interfaces';
 
 const secret = process.env.JWT_SECERT || 'the default secret';
 export class AuthService {
     static async loginOrRegister(username: string, password: string): Promise<LoginOrRegisterResponse> {
-        const usersRepo = new UsersRepo();
         const user = await usersRepo.findOne({ username });
 
         if (user) {
@@ -30,7 +29,7 @@ export class AuthService {
                     user,
                 };
             } else {
-                throw new HTTP400Error('passowrd provided is incorrect!');
+                throw new HTTPBadRequestError('passowrd provided is incorrect!');
             }
         } else {
             // user needs to be registered

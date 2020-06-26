@@ -1,9 +1,9 @@
 import { Request, Response, NextFunction, Application } from 'express';
-import { HTTPClientError, HTTP404Error } from '../utils';
+import { HTTPClientError, HTTPNotFoundError } from '@rw-node-common-ts';
 
 const handle404Error = (app: Application) => {
     app.use((req: Request, res: Response) => {
-        throw new HTTP404Error('handler for the path requested, not found.');
+        throw new HTTPNotFoundError('handler for the path requested, not found.');
     });
 };
 

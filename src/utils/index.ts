@@ -1,5 +1,3 @@
-export * from './httpErrors';
-
 import { Application, Router } from 'express-serve-static-core';
 import { EModuleName } from '../modules';
 import passport from 'passport';

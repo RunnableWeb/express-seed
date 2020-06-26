@@ -18,12 +18,20 @@
         "emitDecoratorMetadata": true,
 
         "paths": {
-            "@rw-node-utils-ts": ["./utils"],
+            "@rw-node-common-ts": ["./rw-node-common-ts"],
             "@app/config": ["./config"],
             "@app/middlewares": ["./middlewares"],
+            "@app/interfaces": ["./interfaces"],
+            "@app/utils": ["./utils"],
             "@app/modules": ["./modules"],
+            "@app/modules/*": ["./modules/*"],
+            "@app/data/*": ["./data/*"],
             "@app/repository": ["./repository"],
-            "@app/repository/models": ["./repository/models"]
+            "@app/repository/repos": ["./repository/repos"],
+            "@app/repository/models": ["./repository/models"],
+            "@app/repository/models/definitions": ["./repository/models/definitions"],
+            "@app/repository/enums": ["./repository/enums"],
+            "@app/repository/interfaces": ["./repository/interfaces"]
         }
     }
 }

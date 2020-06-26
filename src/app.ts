@@ -1,16 +1,20 @@
+import dotenv from 'dotenv';
+dotenv.config();
+
 import express from 'express';
 
-import { mwCommons, mwErrors } from './middlewares';
-import { applyMiddleware, applyRoutes } from '@rw-node-utils-ts';
-import { routesMap } from '@app/modules';
+import { applyMiddleware, applyRoutes } from '@app/utils';
 
-import dotenv from 'dotenv';
+import { routesMap } from '@app/modules';
+import { mwCommons, mwErrors } from '@app/middlewares';
 import { config } from '@app/config';
+import { init as repoInit } from '@app/repository';
 
 const app = express();
 
-dotenv.config();
 config();
+
+repoInit();
 
 applyMiddleware(mwCommons, app);
 
