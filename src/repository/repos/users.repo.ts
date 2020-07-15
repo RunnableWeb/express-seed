@@ -1,5 +1,6 @@
 import { BaseRepo } from './BaseRepo';
-import { IUserModel, IUser, User } from '@app/repository/models';
+import { User } from '@app/repository/entities';
+import { IUserModel, IUser } from '@app/repository/interfaces';
 
 class UsersRepo extends BaseRepo<IUserModel, IUser> {
     constructor() {

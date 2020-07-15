@@ -1,6 +1,6 @@
-import mongoose, { Schema, mongo } from 'mongoose';
+import mongoose, { Schema } from 'mongoose';
 
-import { IUserModel } from '../interfaces.models';
+import { IUserModel } from '@app/repository/interfaces';
 
 const UserSchema = new Schema({
     username: {

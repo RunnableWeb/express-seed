@@ -1,4 +1,4 @@
-import { IUserModel } from '@app/repository/models';
+import { IUserModel } from '@app/repository/interfaces';
 
 /**
  * need to extend the two files

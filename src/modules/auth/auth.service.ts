@@ -2,7 +2,7 @@ import jwt from 'jsonwebtoken';
 import bcrypt from 'bcryptjs';
 
 import { usersRepo } from '@app/repository/repos';
-import { IUser } from '@app/repository/models';
+import { IUser } from '@app/repository/interfaces';
 
 import { HTTPBadRequestError } from '@rw-node-common-ts';
 

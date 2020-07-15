@@ -10,3 +10,14 @@ export interface IRead<T extends mongoose.Document> {
     findOne(cond: object): Promise<T>;
     findById(id: string): Promise<T>;
 }
+
+export interface BaseModel {
+    id?: any; // per mongoose.Document type
+    _id: any;
+}
+
+export interface IUser extends BaseModel {
+    username: string;
+    password: string;
+}
+export interface IUserModel extends IUser, mongoose.Document {}

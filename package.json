@@ -64,8 +64,7 @@
         "@app/repository": "dist/repository",
         "@app/data": "dist/data",
         "@app/data/**/*": "dist/data/**/*",
-        "@app/repository/models": "dist/repository/models",
-        "@app/repository/models/definitions": "dist/repository/models/definitions",
+        "@app/repository/entities": "dist/repository/entities",
         "@app/repository/repos": "dist/repository/repos",
         "@app/repository/enums": "dist/repository/enums",
         "@app/repository/interfaces": "dist/repository/interfaces"

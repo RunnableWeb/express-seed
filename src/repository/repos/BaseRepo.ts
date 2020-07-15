@@ -22,7 +22,7 @@ export abstract class BaseRepo<T extends mongoose.Document, TBase> implements IW
 
         return rec;
     }
-    async update(id: string, model: Partial<T>): Promise<T | null> {
+    async update(id: string | ObjectId, model: Partial<T>): Promise<T | null> {
         const rec = (await this._model.findOneAndUpdate({ _id: this.toObjectId(id) }, model, {
             new: true,
         })) as T;
